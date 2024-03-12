@@ -4,16 +4,16 @@ contract ContratoStorage {
 
     struct Contrato {
         string nucontrato;
-        bytes32 data;
+        string data;
     }
 
     mapping(string => Contrato) public contratos;
 
-    function post(string memory nucontrato, bytes32 data) public {
+    function post(string memory nucontrato, string memory data) public {
         contratos[nucontrato] = Contrato(nucontrato, data);
     }
 
-    function get(string memory nucontrato) public view returns (bytes32 data) {
+    function get(string memory nucontrato) public view returns (string memory data) {
         return (contratos[nucontrato].data);
     }
 }
