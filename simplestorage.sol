@@ -1,4 +1,4 @@
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.2;
 
 contract ContratoStorage {
 
@@ -9,11 +9,11 @@ contract ContratoStorage {
 
     mapping(string => Contrato) public contratos;
 
-    function post(string memory nucontrato, bytes32 memory data) public {
+    function post(string memory nucontrato, bytes32 data) public {
         contratos[nucontrato] = Contrato(nucontrato, data);
     }
 
-    function get(string memory nucontrato) public view returns (bytes32 memory data) {
+    function get(string memory nucontrato) public view returns (bytes32 data) {
         return (contratos[nucontrato].data);
     }
 }
