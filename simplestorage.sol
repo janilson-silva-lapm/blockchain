@@ -11,7 +11,7 @@ contract simplestorage {
       storedData = nucontrato + contrato + clientes;
    }
 
-   function set(string memory x) public returns (string value) {
+   function set(string memory x) public returns (string memory value) {
 //      require(x < 100, "Value can not be over 100");
       storedData = x;
 
