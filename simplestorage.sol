@@ -7,7 +7,7 @@ contract simplestorage {
       uint data
    );
 
-   constructor(uint initVal, string nucontrato) public {
+   constructor(uint initVal, string memory nucontrato) public {
       storedData = initVal;
    }
 
