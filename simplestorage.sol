@@ -1,14 +1,14 @@
 pragma solidity ^0.5.0;
 
 contract simplestorage {
-   uint public storedData;
+   string public storedData;
 
    event DataStored (
       uint data
    );
 
-   constructor(uint initVal) public {
-      storedData = initVal;
+   constructor(string nucontrato, string contrato, string clientes) public {
+      storedData = nucontrato + contrato + clientes;
    }
 
    function set(uint x) public returns (uint value) {
@@ -20,11 +20,11 @@ contract simplestorage {
       return storedData;
    }
 
-   function get() public view returns (uint retVal) {
+   function get() public view returns (string retVal) {
       return storedData;
    }
 
-   function query() public view returns (uint retVal) {
+   function query() public view returns (string retVal) {
       return storedData;
    }
 }
