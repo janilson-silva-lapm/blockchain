@@ -7,7 +7,7 @@ contract simplestorage {
       string data
    );
 
-   constructor(string nucontrato, string contrato, string clientes) public {
+   constructor(string memory nucontrato, string memory contrato, string memory clientes) public {
       storedData = nucontrato + contrato + clientes;
    }
 
