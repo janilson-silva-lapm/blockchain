@@ -7,12 +7,12 @@ contract simplestorage {
       string data
    );
 
-   constructor(string memory nucontrato, string memory contrato, string memory clientes) public {
+   constructor(string nucontrato, string contrato, string clientes) public {
       storedData = nucontrato + contrato + clientes;
    }
 
-   function set(string memory x) public returns (string memory value) {
-//      require(x < 100, "Value can not be over 100");
+   function set(string x) public returns (string value) {
+      require(x < 100, "Value can not be over 100");
       storedData = x;
 
       emit DataStored(x);
@@ -24,7 +24,7 @@ contract simplestorage {
       return storedData;
    }
 
-   function query() public view returns (string memory retVal) {
+   function query() public view returns (string retVal) {
       return storedData;
    }
 }
