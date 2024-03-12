@@ -7,11 +7,11 @@ contract simplestorage {
       string data
    );
 
-   constructor(string nucontrato, string contrato, string clientes) public {
+   constructor(string memory nucontrato, string memory contrato, string memory clientes) public {
       storedData = nucontrato + contrato + clientes;
    }
 
-   function set(uint x) public returns (uint value) {
+   function set(string x) public returns (string value) {
       require(x < 100, "Value can not be over 100");
       storedData = x;
 
