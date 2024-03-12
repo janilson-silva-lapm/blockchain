@@ -1,22 +1,19 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.8.1;
 
-contract simplestorage {
-   string public storedData;
+contract ContratoStorage {
 
-   constructor(uint initVal, string nucontrato) public {
-      storedData = initVal + nucontrato;
-   }
+    struct Contrato {
+        string nucontrato;
+        string data;
+    }
 
-   function set(string x) public {
-      require(x < 100, "Value can not be over 100");
-      storedData = x;
-   }
+    mapping(string => Contrato) public contratos;
 
-   function get() public view returns (string) {
-      return storedData;
-   }
+    function post(string memory nucontrato, string memory data) public {
+        contratos[nucontrato] = Contrato(nucontrato, data);
+    }
 
-   function query() public view returns (string) {
-      return storedData;
-   }
+    function get(string memory nucontrato) public view returns (string memory data) {
+        return (contratos[nucontrato].data);
+    }
 }
