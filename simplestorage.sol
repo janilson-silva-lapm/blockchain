@@ -14,6 +14,6 @@ contract ContratoStorage {
     }
 
     function get(string memory nucontrato) public view returns (string memory data) {
-        return (contratos[nucontrato].data);
+        return (contratos[nucontrato].nucontrato);
     }
 }
