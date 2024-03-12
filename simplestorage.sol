@@ -24,7 +24,7 @@ contract simplestorage {
       return storedData;
    }
 
-   function query() public view returns (string retVal) {
+   function query() public view returns (string memory retVal) {
       return storedData;
    }
 }
