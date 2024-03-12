@@ -20,7 +20,7 @@ contract simplestorage {
       return storedData;
    }
 
-   function get() public view returns (string retVal) {
+   function get() public view returns (bytes32 retVal) {
       return storedData;
    }
 
