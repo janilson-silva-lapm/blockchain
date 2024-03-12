@@ -4,7 +4,7 @@ contract simplestorage {
    string public storedData;
 
    event DataStored (
-      uint data
+      string data
    );
 
    constructor(string nucontrato, string contrato, string clientes) public {
